@@ -1,0 +1,181 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    height: 100vh;  /* Ensure the body takes full viewport height */
+    position: relative;
+}
+
+/* Banner Styling */
+.banner {
+    background: rgb(128, 0, 0); /* Gradient purple */
+    padding: 20px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 40px;
+    color: white;
+    box-shadow: yellow;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+.find-interpreter-banner {
+    background-color: white;
+    color: maroon;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 40px;
+    border-radius: 25px;
+    width: fit-content;
+    margin: auto;
+    position: relative;
+    top: -20px; /* Adjusts it to protrude */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Section Styling */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #4A148C;
+    font-weight: 600;
+}
+
+h2 {
+    margin-top: 40px;
+    font-size: 24px;
+}
+
+/* Interpreter List */
+.interpreter-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Interpreter Card */
+.interpreter-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgb(128, 0, 0);
+    width: 270px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.interpreter-card:hover {
+    transform: translateY(-5px);
+}
+
+.interpreter-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4A148C; /* Border color updated */
+}
+
+.interpreter-card h3 {
+    margin-top: 10px;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.interpreter-card p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Popup Modal */
+.popup {
+    display: none;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 25px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    width: 300px;
+    text-align: center;
+    z-index: 1000;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    animation: fadeIn 1.3s ease-in-out;
+    position: relative;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #777;
+    transition: color 0.3s ease-in-out;
+}
+
+.close-btn:hover {
+    color: #e63946; /* Updated hover color */
+}
+
+/* Popup Heading & Content */
+.popup h2 {
+    color: #4A148C; /* Heading color updated */
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.popup p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Book Now Button */
+.book-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #4A148C, #6A1B9A); /* Gradient purple button */
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.book-btn:hover {
+    background: linear-gradient(135deg, #6A1B9A, #4A148C); /* Gradient reverse on hover */
+    transform: scale(1.05);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -55%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
